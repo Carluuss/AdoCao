@@ -69,7 +69,7 @@ header nav a:hover {
 }
 
 header > div {
-    background-image: url(../Img/headerbackground.webp);
+    background-image: url(Img/headerbackground.webp);
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
