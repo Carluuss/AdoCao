@@ -6,6 +6,7 @@
     <title>AdoCão</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="https://img.freepik.com/vetores-gratis/um-modelo-de-adesivo-de-personagem-de-desenho-animado-de-cachorro_1308-75254.jpg?w=740&t=st=1699276934~exp=1699277534~hmac=bd0606629695c49a70fb9ce700d88d13a25dc6709fbde747e28c6b687dc9b02e" type="image/x-icon">
+    <script src="FormPage.js"></script>
 </head>
 <body>
     <img src="../Img/backgroundForm.png" alt="" class="backgroundImg">
@@ -19,31 +20,35 @@
             <div>
                 <div>
                     <label for="">Nome: </label>
-                    <input type="text">
+                    <input type="text" id="nameInput">
+                    <p id="nameError">Digite um nome válido!</p>
                 </div>
                 <div>
                     <label for="">E-mail: </label>
-                    <input type="email">
+                    <input type="email" id="emailInput">
+                    <p id="emailError">Digite um email válido!</p>
                 </div>
                 <div>
                     <label for="">Senha: </label>
-                    <input type="password">
+                    <input type="password" id="senhaInput">
+                    <p id="senhaError">Digite uma senha válida!</p>
                 </div>
                 <div>
                     <label for="">Repita a senha: </label>
-                    <input type="password">
-                    
+                    <input type="password" id="senhaRepetirInput">
+                    <p id="senhaRepetirError">Digite uma senha válida!</p>
                 </div>
                 <div class="dateContent">
+                    <label for="">Data de Nascimento: </label>
                     <div>
-                        <label for="">Data de Nascimento: </label>
-                        <input type="date">
+                        <input type="date" id="dataInput">
+                        <p id="dataError">Digite uma senha válida!</p>
                     </div>
                 </div>
             </div>
             <div class="btns">
-                <a href="../Home/index.html">Voltar</a>
-                <input type="submit" value="Cadastrar">
+                <a href="../index.html">Voltar</a>
+                <button onclick="submitForm()">Enviar</button>
             </div>
         </fieldset>
     </form>

@@ -1,6 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
 :root {
     --PrimaryColor: #2060c0;
@@ -12,7 +10,7 @@
     margin: 0;
     padding: 0;
     border: border-box;
-    font-family: 'Tilt Neon', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 
@@ -26,11 +24,11 @@
 }
 
 body {
-background-color: var(--SecondaryColor);
-display: flex;
-justify-content: center;
-align-items: center;
-height: 100vh;
+    background-color: var(--SecondaryColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 h1 {
@@ -38,12 +36,10 @@ h1 {
     background-color: white;
     text-align: center;
     border-radius: 50px;
-    width: 30%;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
     margin-left: 260px;
     font-size: 40pt;
     box-shadow: 1px 1px  5px black;
-    margin-bottom: 1.6em;
 }
 
 .destaque {
@@ -51,14 +47,14 @@ h1 {
 }
 
 fieldset {
-    width: 35vw;
+    width: 27vw;
     background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     border-radius: 50px;
-    border: dashed 5px black;    
+    border: solid 3px black;    
     padding: 1em;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
@@ -72,11 +68,11 @@ fieldset > div {
     align-items: center;
     display: flex;
     flex-wrap: wrap;
-    gap: 2em;
+    gap: .8em;
 }
 
 fieldset > div > div {
-    margin-bottom: 1.2em;
+    height: 6em;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -87,42 +83,54 @@ fieldset > div > div > span {
     padding: 0em 1.2em;
 }
 
+fieldset > div > div > p {
+    color: red;
+    opacity: 0;
+}
+
 .animaisIMG {
     position: absolute;
-    top: 30px;
-    left: 40em;
+    top: 150px;
+    left: 44em;
 }
 
 .animaisIMG img {
-    height: 28em;
+    height: 22em;
 }
 
 .dateContent {
-    gap: 1.2em;
+    display: flex;
+    flex-direction: row;
+    gap: .7em;
 }
 
 .dateContent div {
     display: flex;
-    gap: 1.2em;
+    flex-direction: column;
 }
 
 .dateContent label {
-    font-size: 35px;
+    font-size: 20px;
+    position: relative;
+    bottom: .5em;
 }
 
+.dateContent p {
+    color: red;
+    opacity: 0;
+}
 input{
-    width: 15em;
-    height: 2.5em;
-    padding: 0px 10px;
+    height: 1.9em;
+    padding: 0em .8em;
     font-size: 1.2em;
 }
 
 label {
-    font-size: 1.9vw;
+    font-size: 25px;
 
 }
 
-a, input[type='submit']{
+input[type='submit']{
     text-decoration: none;
     width: 9em;
     text-align: center;
@@ -135,9 +143,6 @@ a, input[type='submit']{
     box-shadow: 1px 1px 5px black;
 }
 
-a {
-    padding: .65em 0;
-}
 
 legend {
     background-color: var(--PrimaryColor);
@@ -148,6 +153,20 @@ legend {
     padding: 0em .4em;
 }
 
-.btns {
-    margin: .8em 0;
+
+.btns button, .btns a {
+    text-decoration: none;
+    padding: .3em 1.7em;
+    border-radius: 15px;
+    cursor: pointer;
+    background-color: var(--PrimaryColor);
+    color: white;
+    border: 1px solid var(--PrimaryColor);
+    font-size: 25px;
+    transition: .3s;
+}
+
+.btns button:hover, .btns a:hover {
+    background-color: white;
+    color: var(--PrimaryColor);
 }
