@@ -14,43 +14,27 @@
             <img src="formImg/sideImg.jpg" alt="">
         </div>
         <div class="formContent">
-            <form action="../enviarForm.php" method="POST" id="formRegister">
+            <form action="" method="POST" id="formLogin">
                 <div>
                     <div>
                         <label for="">Nome </label>
                         <input type="text" id="nameInput" placeholder="Digie um nome" required>
                         <p id="nameError">Digite um nome válido!</p>
                     </div>
-                    <div>
-                        <label for="">E-mail </label>
-                        <input type="email" id="emailInput" placeholder="Digite seu email" required>
-                        <p id="emailError">Digite um email válido!</p>
-                    </div>
+                    
                     <div>
                         <label for="">Senha </label>
                         <input type="password" id="senhaInput" placeholder="mínimo 8 caracteres" required >
                         <p id="senhaError">Digite uma senha válida!</p>
                     </div>
-                    <div>
-                        <label for="">Repita a senha </label>
-                        <input type="password" id="senhaRepetirInput" placeholder="repita sua senha" required>
-                        <p id="senhaRepetirError">Digite uma senha válida!</p>
-                    </div>
-                    <div class="dateContent">
-                        <label>Data de Nascimento</label>
-                        <div>
-                            <input type="date" id="dataInput">
-                            <p id="dataError">Digite uma data válida!</p>
-                        </div>
-                    </div>
                 </div>
                 <div class="btnContent">
-                    <button type="button" onclick="submitForm()">enviar</button>
+                    <button type="button" onclick="submitForm()">Entrar</button>
                 </div>
             </form>
             <hr>
             <div class="linkContent">
-                <a href="login.html">Já tem uma conta? faça o login!</a>
+                <a href="FormPage.html">Não tem uma conta? crie uma!</a>
             </div>
         </div>
     </div>
