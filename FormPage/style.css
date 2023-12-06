@@ -1,172 +1,139 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
-:root {
-    --PrimaryColor: #2060c0;
-    --SecondaryColor: #67a8fc;
-    --TerciariColor: #2595c9;
-}
-
 * {
     margin: 0;
     padding: 0;
-    border: border-box;
     font-family: 'Montserrat', sans-serif;
 }
 
-
-.backgroundImg {
-    position: absolute;
-    height: 100vh;
-    width: 100vw;
-    object-fit: cover;
-    z-index: -1;
-    filter: blur(5px);
+:root {
+    --background-color: #8ec5da;
+    --primary-color: #85C0D5;
 }
 
 body {
-    background-color: var(--SecondaryColor);
-    display: flex;
-    justify-content: center;
-    align-items: center;
     height: 100vh;
-}
-
-h1 {
-    border: 1px solid var(--PrimaryColor);
-    background-color: white;
-    text-align: center;
-    border-radius: 50px;
-    margin-bottom: 100px;
-    margin-left: 260px;
-    font-size: 40pt;
-    box-shadow: 1px 1px  5px black;
-}
-
-.destaque {
-    color: #2060c0;
-}
-
-fieldset {
-    width: 27vw;
-    background-color: white;
+    background-color: var(--background-color);
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+}
+
+.boxForm {
+    display: flex;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    border-radius: 15px;
+}
+
+.imgContent {
+
+}
+.imgContent img {
+    height: 34em;
+    border-radius: 15px 0px 0px 15px;
+}
+
+.formContent {
+    height: 35em;
+    background-color: white;
+    width: 30em;
+    border-radius: 0px 15px 15px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
-    border-radius: 50px;
-    border: solid 3px black;    
-    padding: 1em;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
-fieldset > legend {
-    z-index: 999;
+.formContent form {
+    margin-bottom: .5em;
 }
 
-fieldset > div {
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-wrap: wrap;
-    gap: .8em;
-}
-
-fieldset > div > div {
-    height: 6em;
+.formContent form > div {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    z-index: 999;
+    gap: .4em;
 }
 
-fieldset > div > div > span {
-    padding: 0em 1.2em;
+.formContent form > div > div {
+    display: flex;
+    flex-direction: column;
 }
 
-fieldset > div > div > p {
+.formContent form > div > div > label {
+    font-size: 18px;
+    margin-left: .7em;
+}
+
+.formContent form > div > div > input {
+    width: 25em;
+    padding: .8em 1.2em;
+    border-radius: 60px;
+    border: 1px solid rgba(0, 0, 0, 0.288);
+}
+
+.formContent form > div > div > p {
+    font-size: 14px;
     color: red;
     opacity: 0;
-}
-
-.animaisIMG {
-    position: absolute;
-    top: 150px;
-    left: 44em;
-}
-
-.animaisIMG img {
-    height: 22em;
 }
 
 .dateContent {
-    display: flex;
     flex-direction: row;
-    gap: .7em;
-}
-
-.dateContent div {
-    display: flex;
-    flex-direction: column;
 }
 
 .dateContent label {
-    font-size: 20px;
-    position: relative;
-    bottom: .5em;
+    font-size: 10px;
+    margin-left: .7em;
+}
+
+.dateContent input {
+    width: 25em;
+    padding: .8em 1.2em;
+    border-radius: 60px;
+    border: 1px solid rgba(0, 0, 0, 0.288);
 }
 
 .dateContent p {
+    font-size: 14px;
     color: red;
     opacity: 0;
 }
-input{
-    height: 1.9em;
-    padding: 0em .8em;
-    font-size: 1.2em;
+
+hr {
+    position: relative;
+    width: 85%;
+    top: 10px;
 }
 
-label {
-    font-size: 25px;
+.btnContent {
+
 
 }
 
-input[type='submit']{
-    text-decoration: none;
-    width: 9em;
-    text-align: center;
-    font-size: 1.5vw;
+.btnContent button {
+    cursor: pointer;
+    font-size: 18px;
+    width: 15em;
+    margin: 0 auto;
+    background-color: var(--primary-color);
     border: none;
-    background-color: var(--SecondaryColor);
-    color: white;
     border-radius: 15px;
-    cursor: pointer;
-    box-shadow: 1px 1px 5px black;
-}
-
-
-legend {
-    background-color: var(--PrimaryColor);
-    border-radius: 50px;
-    font-size: 1.5vw;
-    margin-left: 2.5em;
+    padding: .4em 1.7em;
     color: white;
-    padding: 0em .4em;
+    border: 1px solid var(--primary-color);
+    transition: .5s;
+    font-weight: bolder;
 }
 
-
-.btns button, .btns a {
-    text-decoration: none;
-    padding: .3em 1.7em;
-    border-radius: 15px;
-    cursor: pointer;
-    background-color: var(--PrimaryColor);
-    color: white;
-    border: 1px solid var(--PrimaryColor);
-    font-size: 25px;
-    transition: .3s;
-}
-
-.btns button:hover, .btns a:hover {
+.btnContent button:hover {
     background-color: white;
-    color: var(--PrimaryColor);
+    color: var(--primary-color);
+}
+
+.linkContent a {
+    position: relative;
+    top: 20px;
+    font-size: 15px;
+    text-decoration: none;
+    color: rgb(68, 68, 253);
 }

@@ -9,48 +9,50 @@
     <script src="FormPage.js"></script>
 </head>
 <body>
-    <img src="../Img/backgroundForm.png" alt="" class="backgroundImg">
-    <form action="">
-        <h1>Ado<span class="destaque">C</span>ão</h1>
-        <div class="animaisIMG">
-            <img src="../Img/animaisForm.png" alt="">
+    <div class="boxForm">
+        <div class="imgContent">
+            <img src="formImg/sideImg.jpg" alt="">
         </div>
-        <fieldset>
-            <legend>Cadastro</legend>
-            <div>
+        <div class="formContent">
+            <form action="../enviarForm.php" method="POST" id="formRegister">
                 <div>
-                    <label for="">Nome: </label>
-                    <input type="text" id="nameInput">
-                    <p id="nameError">Digite um nome válido!</p>
-                </div>
-                <div>
-                    <label for="">E-mail: </label>
-                    <input type="email" id="emailInput">
-                    <p id="emailError">Digite um email válido!</p>
-                </div>
-                <div>
-                    <label for="">Senha: </label>
-                    <input type="password" id="senhaInput">
-                    <p id="senhaError">Digite uma senha válida!</p>
-                </div>
-                <div>
-                    <label for="">Repita a senha: </label>
-                    <input type="password" id="senhaRepetirInput">
-                    <p id="senhaRepetirError">Digite uma senha válida!</p>
-                </div>
-                <div class="dateContent">
-                    <label for="">Data de Nascimento: </label>
                     <div>
-                        <input type="date" id="dataInput">
-                        <p id="dataError">Digite uma senha válida!</p>
+                        <label for="">Nome </label>
+                        <input type="text" id="nameInput" placeholder="Digie um nome" required>
+                        <p id="nameError">Digite um nome válido!</p>
+                    </div>
+                    <div>
+                        <label for="">E-mail </label>
+                        <input type="email" id="emailInput" placeholder="Digite seu email" required>
+                        <p id="emailError">Digite um email válido!</p>
+                    </div>
+                    <div>
+                        <label for="">Senha </label>
+                        <input type="password" id="senhaInput" placeholder="mínimo 8 caracteres" required >
+                        <p id="senhaError">Digite uma senha válida!</p>
+                    </div>
+                    <div>
+                        <label for="">Repita a senha </label>
+                        <input type="password" id="senhaRepetirInput" placeholder="repita sua senha" required>
+                        <p id="senhaRepetirError">Digite uma senha válida!</p>
+                    </div>
+                    <div class="dateContent">
+                        <label>Data de Nascimento</label>
+                        <div>
+                            <input type="date" id="dataInput">
+                            <p id="dataError">Digite uma data válida!</p>
+                        </div>
                     </div>
                 </div>
+                <div class="btnContent">
+                    <button type="button" onclick="submitForm()">enviar</button>
+                </div>
+            </form>
+            <hr>
+            <div class="linkContent">
+                <a href="">Já tem uma conta? faça o login!</a>
             </div>
-            <div class="btns">
-                <a href="../index.html">Voltar</a>
-                <button onclick="submitForm()">Enviar</button>
-            </div>
-        </fieldset>
-    </form>
+        </div>
+    </div>
 </body>
 </html>
