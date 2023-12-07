@@ -1,3 +1,8 @@
+
+
+
+
+
 function resetStyles() {
     let nomeError = document.getElementById("nameError")
     let senhaError = document.getElementById("senhaError")

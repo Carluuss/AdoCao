@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AdoCão</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="formPage.css">
     <link rel="shortcut icon" href="https://img.freepik.com/vetores-gratis/um-modelo-de-adesivo-de-personagem-de-desenho-animado-de-cachorro_1308-75254.jpg?w=740&t=st=1699276934~exp=1699277534~hmac=bd0606629695c49a70fb9ce700d88d13a25dc6709fbde747e28c6b687dc9b02e" type="image/x-icon">
-    <script src="FormPage.js"></script>
+    <script src="FormPage.js" type="text/javascript"></script>
 </head>
-<body>
+<body id="body">
     <div class="boxForm">
-        <div class="imgContent">
-            <img src="formImg/sideImg.jpg" alt="">
+        <div class="imgContent" id="imgContainer">
+            <img src='' alt="" id="imgAnimal">
         </div>
         <div class="formContent">
             <form action="../enviarForm.php" method="POST" id="formRegister">
@@ -45,7 +45,7 @@
                     </div>
                 </div>
                 <div class="btnContent">
-                    <button type="button" onclick="submitForm()">enviar</button>
+                    <button id="botao" type="button" onclick="submitForm()">enviar</button>
                 </div>
             </form>
             <hr>
@@ -54,5 +54,34 @@
             </div>
         </div>
     </div>
+
+    <script>
+            (function() {
+        let imgList = [
+            ["./formImg/sideImg1.jpg", '#8ec5da', '#85C0D5'], 
+            ['./formImg/sideImg2.jpg', '#D48651', '#D69362'], 
+            ['./formImg/sideImg3.jpg', '#F7E5BD', '#F5E6CC'], 
+            ['./formImg/sideImg4.jpg', '#F0B4D5', '#EFC9E1']
+        ]
+
+        let colorList = [['#8ec5da'],['#D48651'], ['#F7E5BD'], ['#F0B4D5']
+
+    ]
+
+        let randomNumber = Math.floor(Math.random() * imgList.length);
+        let randomColor =  randomNumber;
+        let body = document.getElementById('body')
+        let botao = document.getElementById('botao')
+
+        document.getElementById("imgContainer").innerHTML = "<img src='" + imgList[randomNumber][0] + "'>"
+
+        document.getElementById("body").style = "background='" + colorList[randomColor][0] + "'>"
+        
+        body.style.background =  colorList[randomColor][0];
+        botao.style.background =  colorList[randomColor][0];
+        botao.style.color = 'white';
+
+    })()
+    </script>
 </body>
 </html>
