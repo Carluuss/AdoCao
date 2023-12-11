@@ -7,25 +7,35 @@
     <link rel="stylesheet" href="formPage.css">
     <link rel="shortcut icon" href="https://img.freepik.com/vetores-gratis/um-modelo-de-adesivo-de-personagem-de-desenho-animado-de-cachorro_1308-75254.jpg?w=740&t=st=1699276934~exp=1699277534~hmac=bd0606629695c49a70fb9ce700d88d13a25dc6709fbde747e28c6b687dc9b02e" type="image/x-icon">
     <script src="FormPage.js"></script>
+    <link rel="stylesheet" href="formLoginPage.css">
 </head>
 <body>
     <div class="boxForm">
-        <div class="imgContent">
-            <img src="formImg/sideImg.jpg" alt="">
+        <div class="imgContent" id="imgContainer">
         </div>
         <div class="formContent">
             <form action="" method="POST" id="formLogin">
                 <div>
+                    <h1>ADO<span>C</span>ÃO</h1>
+                </div>
+                <div>
                     <div>
-                        <label for="">Nome </label>
-                        <input type="text" id="nameInput" placeholder="Digie um nome" required>
+                        <input type="email" id="nameInput" placeholder="Digite o email" required>
                         <p id="nameError">Digite um nome válido!</p>
                     </div>
-                    
                     <div>
-                        <label for="">Senha </label>
-                        <input type="password" id="senhaInput" placeholder="mínimo 8 caracteres" required >
+                        <input type="password" id="senhaInput" placeholder="Digite a senha" required >
                         <p id="senhaError">Digite uma senha válida!</p>
+                    </div>
+                    <div class="linkRegister">
+                        <button class="googleLink">
+                            <img src="formImg/googleLogo.png" alt="">
+                            <p>Registrar com o google</p>
+                        </button>
+                        <button class="facebookLink">
+                            <img src="formImg/facebookLogo.png" alt="">
+                            <p>Registrar com o facebook</p>
+                        </button>
                     </div>
                 </div>
                 <div class="btnContent">
@@ -34,9 +44,28 @@
             </form>
             <hr>
             <div class="linkContent">
-                <a href="FormPage.html">Não tem uma conta? crie uma!</a>
+                <a href="FormPage.html">Não tem uma conta? Crie uma!</a>
             </div>
         </div>
     </div>
+    <script>
+    (function() {
+    let imgList = [
+        ["./formImg/sideImg1.jpg", '#8ec5da', '#85C0D5'], 
+        ['./formImg/sideImg2.jpg', '#D48651', '#D69362'], 
+        ['./formImg/sideImg3.jpg', '#F7E5BD', '#F5E6CC'], 
+        ['./formImg/sideImg4.jpg', '#F0B4D5', '#EFC9E1']
+    ]
+
+    let randomNumber = Math.floor(Math.random() * imgList.length);
+    let randomColor =  randomNumber;
+
+    document.getElementById("imgContainer").innerHTML = "<img id=img src='" + imgList[randomNumber][0] + "'>"
+
+    document.documentElement.style.setProperty("--background-color", imgList[randomNumber][1])
+    document.documentElement.style.setProperty("--primary-color", imgList[randomNumber][2])
+
+})()
+</script>
 </body>
 </html>

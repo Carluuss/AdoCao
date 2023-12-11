@@ -7,8 +7,8 @@
 }
 
 :root {
-    --background-color: #8ec5da;
-    --primary-color: #85C0D5;
+    --background-color: ;
+    --primary-color: ;
 }
 
 body {
@@ -23,11 +23,12 @@ body {
     display: flex;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     border-radius: 15px;
+    height: 35em;
 }
 
 
-.imgContent img {
-    height: 34.5em;
+.imgContent #img {
+    height: 35em;
     border-radius: 15px 0px 0px 15px;
 }
 
@@ -35,21 +36,29 @@ body {
     height: 35em;
     background-color: white;
     width: 30em;
+    text-align: center;
     border-radius: 0px 15px 15px 0px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
 }
 
 .formContent form {
-    margin-bottom: .5em;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.formContent h1 {
+    padding: .5em;
+    font-size: 50px;
+}
+
+.formContent  div  span {
+    font-size: 70px;
+    color: var(--primary-color);
 }
 
 .formContent form > div {
     display: flex;
     flex-direction: column;
-    gap: .4em;
 }
 
 .formContent form > div > div {
@@ -75,32 +84,50 @@ body {
     opacity: 0;
 }
 
-.dateContent {
-    flex-direction: row;
+.linkRegister {
+    display: flex;
+    flex-direction: column;
+    gap: .3em;
+    margin-bottom: .6em;
+    
+}
+.linkRegister > button {
+    border-radius: 15px;
+    cursor: pointer;
+    text-align: center;
+    border: none;
+    display: flex;
+    gap: .7em;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: .6em 0em;
 }
 
-.dateContent label {
-    font-size: 10px;
-    margin-left: .7em;
+.linkRegister > button > img {
+    height: 1.7em;
 }
 
-.dateContent input {
-    width: 25em;
-    padding: .8em 1.2em;
-    border-radius: 60px;
-    border: 1px solid rgba(0, 0, 0, 0.288);
+.linkRegister > button > p {
+    font-size: 15px;
 }
 
-.dateContent p {
-    font-size: 14px;
-    color: red;
-    opacity: 0;
+.googleLink {
+    background-color: #fa897f;
+}
+.facebookLink {
+    background-color: rgb(103, 137, 211);
+}
+.googleLink:hover {
+    background-color: #eb8076;
+}
+.facebookLink:hover {
+    background-color: rgb(106, 146, 235);
 }
 
 hr {
-    position: relative;
-    width: 85%;
-    top: 10px;
+    width: 100%;
+    margin: .4em 0em;
 }
 
 
@@ -110,7 +137,7 @@ hr {
     width: 15em;
     margin: 0 auto;
     background-color: var(--primary-color);
-    border: none;
+    border: 2px solid var(--primary-color);
     border-radius: 15px;
     padding: .4em 1.7em;
     color: white;
@@ -124,10 +151,9 @@ hr {
     color: var(--primary-color);
 }
 
-.linkContent a {
-    position: relative;
-    top: 20px;
+a {
     font-size: 15px;
     text-decoration: none;
     color: rgb(68, 68, 253);
+    text-align: center;
 }

@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root {
+    --background-color: ;
+    --primary-color: ;
+}
+
+body {
+    height: 100vh;
+    background-color: var(--background-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.boxForm {
+    display: flex;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    border-radius: 15px;
+    height: 35em;
+}
+
+
+.imgContent #img {
+    height: 35em;
+    border-radius: 15px 0px 0px 15px;
+}
+
+.formContent {
+    height: 35em;
+    background-color: white;
+    width: 30em;
+    border-radius: 0px 15px 15px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.formContent form > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.formContent form > div > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.formContent form > div > div > label {
+    font-size: 18px;
+    margin-left: .7em;
+}
+
+.formContent form > div > div > input {
+    width: 25em;
+    padding: .8em 1.2em;
+    border-radius: 60px;
+    border: 1px solid rgba(0, 0, 0, 0.288);
+}
+
+.formContent form > div > div > p {
+    font-size: 14px;
+    color: red;
+    opacity: 0;
+}
+
+.linkRegister {
+    display: flex;
+    flex-direction: column;
+    gap: .3em;
+    margin-bottom: .6em;
+    
+}
+.linkRegister > button {
+    border-radius: 15px;
+    cursor: pointer;
+    text-align: center;
+    border: none;
+    display: flex;
+    gap: .7em;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: .6em 0em;
+}
+
+.linkRegister > button > img {
+    height: 1.7em;
+}
+
+.linkRegister > button > p {
+    font-size: 15px;
+}
+
+.googleLink {
+    background-color: #fa897f;
+}
+.facebookLink {
+    background-color: rgb(103, 137, 211);
+}
+.googleLink:hover {
+    background-color: #eb8076;
+}
+.facebookLink:hover {
+    background-color: rgb(106, 146, 235);
+}
+
+hr {
+    width: 100%;
+    margin: .4em 0em;
+}
+
+
+.btnContent button {
+    cursor: pointer;
+    font-size: 18px;
+    width: 15em;
+    margin: 0 auto;
+    background-color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    border-radius: 15px;
+    padding: .4em 1.7em;
+    color: white;
+    
+    transition: .5s;
+    font-weight: bolder;
+}
+
+.btnContent button:hover {
+    background-color: white;
+    color: var(--primary-color);
+}
+
+a {
+    font-size: 15px;
+    text-decoration: none;
+    color: rgb(68, 68, 253);
+}
