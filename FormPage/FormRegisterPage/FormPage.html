@@ -13,7 +13,7 @@
         <div class="imgContent" id="imgContainer">
         </div>
         <div class="formContent">
-            <form action="registrar.php" method="POST" id="formRegister">
+            <form action="../PHP/registrar.php" method="POST" id="formRegister">
                 <div>
                     <div>
                         <label for="">Nome </label>
@@ -38,31 +38,31 @@
                     <hr>
                     <div class="linkRegister">
                         <button class="googleLink">
-                            <img src="formImg/googleLogo.png" alt="">
+                            <img src="../formImg/googleLogo.png" alt="">
                             <p>Registrar com o google</p>
                         </button>
                         <button class="facebookLink">
-                            <img src="formImg/facebookLogo.png" alt="">
+                            <img src="../formImg/facebookLogo.png" alt="">
                             <p>Registrar com o facebook</p>
                         </button>
                     </div>
                 </div>
                 <div class="btnContent">
-                    <button id="botao" type="submit" onclick="submitForm()">Registrar</button>
+                    <button id="botao" type="submit">Registrar</button>
                 </div>
             </form>
             <hr>
-            <a href="login.html">Já tem uma conta? faça o login!</a>
+            <a href="../FormLoginPage/login.html">Já tem uma conta? faça o login!</a>
         </div>
     </div>
 
     <script>
             (function() {
         let imgList = [
-            ["./formImg/sideImg1.jpg", '#8ec5da', '#85C0D5'], 
-            ['./formImg/sideImg2.jpg', '#D48651', '#D69362'], 
-            ['./formImg/sideImg3.jpg', '#F7E5BD', '#F5E6CC'], 
-            ['./formImg/sideImg4.jpg', '#F0B4D5', '#EFC9E1']
+            ["../formImg/sideImg1.jpg", '#8ec5da', '#85C0D5'], 
+            ['../formImg/sideImg2.jpg', '#D48651', '#D69362'], 
+            ['../formImg/sideImg3.jpg', '#F7E5BD', '#F5E6CC'], 
+            ['../formImg/sideImg4.jpg', '#F0B4D5', '#EFC9E1']
         ]
 
         let randomNumber = Math.floor(Math.random() * imgList.length);
