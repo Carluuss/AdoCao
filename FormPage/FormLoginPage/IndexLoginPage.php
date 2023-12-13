@@ -1,3 +1,14 @@
+<?php
+
+session_start();
+    if ($_SESSION['cadastrado'] == "2") {
+        unset($_SESSION['cadastrado']);
+        echo "<script>alert('Cadastrado com sucesso!')</script>";
+    }
+session_destroy();
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt">
 <head>
@@ -14,17 +25,17 @@
         <div class="imgContent" id="imgContainer">
         </div>
         <div class="formContent">
-            <form action="" method="POST" id="formLogin">
+            <form action="../PHP/login.php" method="POST" id="formLogin">
                 <div>
                     <h1>ADO<span>C</span>ÃO</h1>
                 </div>
                 <div>
                     <div>
-                        <input type="email" id="nameInput" placeholder="Digite o email" required>
+                        <input type="email" id="nameInput" placeholder="Digite o email" name="emailLogin" required>
                         <p id="nameError">Digite um nome válido!</p>
                     </div>
                     <div>
-                        <input type="password" id="senhaInput" placeholder="Digite a senha" required >
+                        <input type="password" id="senhaInput" placeholder="Digite a senha" name="senhaLogin" required >
                         <p id="senhaError">Digite uma senha válida!</p>
                     </div>
                     <div class="linkRegister">
