@@ -11,7 +11,7 @@ $sql = "SELECT * FROM registros WHERE email_cliente = '$email_cliente'";
 $result = mysqli_query($conn, $sql);
 $linha = mysqli_fetch_array($result);
 
-
+session_start();
 if($linha) {
     $_SESSION['cadastrado'] = "1";
     header("location: ../FormRegisterPage/IndexFormPage.php");
@@ -19,7 +19,7 @@ if($linha) {
     $sql = "INSERT INTO `registros`( `nome_cliente`, `email_cliente`, `senha_cliente`) VALUES ('$nome_cliente', '$email_cliente', '$senha_cliente')";
     $result = mysqli_query($conn, $sql);
     $_SESSION['cadastrado'] = "2";
-    header("location: ../FormLoginpage/login.php");
+    header("location: ../FormLoginpage/IndexLoginPage.php");
 }
 
 ?>

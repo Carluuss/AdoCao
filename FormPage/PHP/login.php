@@ -5,14 +5,14 @@ $senhaLogin = $_POST['senhaLogin'];
 
 include_once("./conexao.php");
 
-$sql = "SELECT * FROM `registros` WHERE email_cliente = '$emailLogin'";
+$sql = "SELECT * FROM `registros` WHERE email_cliente = '$emailLogin' AND senha_cliente = '$senhaLogin'";
 $res = mysqli_query($conn, $sql);
-$linha = mysqli_fetch_array($result);
+$linha = mysqli_fetch_array($res);
 
-
+session_start();
 if($linha) {
-    $_SESSION['logado'] = "1";
-    header("location: ../../index.html");
+    $_SESSION['logado'] = "$emailLogin";
+    header("location: ../../index.php");
 } else {
     $_SESSION['logado'] = "2";
     header("location: ../FormLoginPage/IndexLoginPage.php");

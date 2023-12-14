@@ -67,6 +67,7 @@ session_destroy();
             </form>
             <hr>
             <a href="../FormLoginPage/login.html">Já tem uma conta? faça o login!</a>
+            <a href="../../index.php">Voltar para a página</a>
         </div>
     </div>
 

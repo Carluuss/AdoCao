@@ -139,8 +139,30 @@ hr {
     color: var(--primary-color);
 }
 
+.linkContent {
+    display: flex;
+    flex-direction: column;
+    gap: .6em;
+}
+
 a {
     font-size: 15px;
     text-decoration: none;
     color: rgb(68, 68, 253);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5em;
+}
+.icon{
+    width: 16px;
+    background-color: var(--background-color);
+    padding: .2em;
+    border: 1px solid black;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+
+.icon:hover{
+    background-color: white;
 }
