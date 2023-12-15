@@ -66,17 +66,19 @@ if(isset($_SESSION['logado'])) {
                 <li><a class="dropdown-item" href="#AnimalsContent">Pássaros</a></li>
               </ul>
             </li>
-            <li class="nav-item formButton">
-              <a class="nav-link" href="./FormPage/FormRegisterPage/FormPage.html">Cadastro</a>
-            </li>
             <?php
             echo"
-            <li class='nav-item'>
-              <p>$linha[0]</p>
-              <p>$linha[1]</p>
-              <p>$linha[2]</p>
-              <p>$linha[3]</p>
-            </li>
+            
+            <li class='nav-item dropdown'>
+            <a class='nav-link dropdown-toggle' href='#' id='navbarDropdownMenuLink' role='button' data-bs-toggle='dropdown' aria-expanded='false'>
+              $linha[nome_cliente]
+            </a>
+            <ul class='dropdown-menu' aria-labelledby='navbarDropdownMenuLink'>
+              <li><a class='dropdown-item' href='./FormPage/FormEditPage/IndexEditPage.php'>Editar Perfil</a></li>
+              <li><a class='dropdown-item' href='#AnimalsContent'>Sair do perfil</a></li>
+            </ul>
+          </li>
+            
             ";
             ?>
           </ul>
