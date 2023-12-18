@@ -157,8 +157,10 @@ a {
 }
 
 a:hover{
-    color: var(--background-color);
+    color: red;
 }
+
+
 
 .icon{
     width: 16px;

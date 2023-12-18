@@ -34,6 +34,11 @@
     color: var(--PrimaryColor);
 }
 
+.logo{
+    font-size: 50px;
+    font-weight: normal;
+}
+
 .dropdown a {
     color: white !important;
 }
@@ -45,6 +50,7 @@
 .formButton {
     background-color: var(--PrimaryColor);
     border-radius: 15px;
+    margin: 0 10px;
 }
 
 .formButton a {
@@ -104,7 +110,7 @@ header > div > a:hover {
 
 header > div > img {
     position: absolute;
-    top: 234px;
+    top: 252px;
 }
 
 body{

@@ -9,6 +9,16 @@ if(isset($_SESSION['logado'])) {
   $linha = mysqli_fetch_array($res);
 }
 
+if(isset($_SESSION['updatePassword'])) {
+  if($_SESSION['updatePassword'] == "1") {
+    unset($_SESSION['updatePassword']);
+    echo"<script>alert('Senha atualizada com sucesso!')</script>";
+  } else if ($_SESSION['updatePassword'] == "2") {
+    unset($_SESSION['updatePassword']);
+    echo"<script>alert('Senha não foi modificada!')</script>";
+  }
+}
+
 ?>
 
 
@@ -75,7 +85,7 @@ if(isset($_SESSION['logado'])) {
             </a>
             <ul class='dropdown-menu' aria-labelledby='navbarDropdownMenuLink'>
               <li><a class='dropdown-item' href='./FormPage/FormEditPage/IndexEditPage.php'>Editar Perfil</a></li>
-              <li><a class='dropdown-item' href='#AnimalsContent'>Sair do perfil</a></li>
+              <li><a class='dropdown-item' href='./index.html'>Sair do perfil</a></li>
             </ul>
           </li>
             

@@ -12,7 +12,7 @@ $linha = mysqli_fetch_array($res);
 session_start();
 if($linha) {
     $_SESSION['logado'] = "$emailLogin";
-    header("location: ../../index.php");
+    header("location: ../../indexLogin.php");
 } else {
     $_SESSION['logado'] = "2";
     header("location: ../FormLoginPage/IndexLoginPage.php");

@@ -66,8 +66,9 @@ session_destroy();
                 </div>
             </form>
             <hr>
-            <a href="../FormLoginPage/login.html">Já tem uma conta? faça o login!</a>
-            <a href="../../index.php">Voltar para a página</a>
+            <a href="../FormLoginPage/Loginpage.html">Já tem uma conta? faça o login!<img class="icon" src="../formImg/icon-pata.png"></a>
+            
+            <a href="../../index.php"> <img class="icon" src="../formImg/seta2-icon.png"> <p>Voltar para a página</p> <img class="icon" src="../formImg/icon-pata.png"></a>
         </div>
     </div>
 

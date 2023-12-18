@@ -10,6 +10,13 @@ if (isset($_SESSION['logado'])) {
 
 }
 
+if (isset($_SESSION['updatePassword'])) {
+    if ($_SESSION['updatePassword'] == "2") {
+        unset($_SESSION['updatePassword']);
+        echo "<script>alert('Senha nao foi alterada!')</script>";
+    }
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -26,7 +33,7 @@ if (isset($_SESSION['logado'])) {
     <section>
         <div class="formContent">
             <form action="../PHP/editarDados.php" method="POST" id="formLogin">
-                <input type="hidden" name="idCliente" <?php echo="value='linha[]'"?>>
+                <input type="hidden" name="idCliente" <?php echo"value='$linha[id_cliente]'"?>>
                 <div>
                     <h1>ADO<span>C</span>ÃO</h1>
                 </div>
@@ -118,12 +125,23 @@ if (isset($_SESSION['logado'])) {
             if(nomeInput.value.trim() == "") {
                 nomeError.style.opacity = "1"
             }
-            if(novaSenhaInput.value.trim() == "") {
+            if(!antigaSenhaInput.value.trim() == "") {
                 novaSenhaError.style.opacity = "1"
             }
-            if(antigaSenhaInput.value.trim() == "") {
-                antigaSenhaError.style.opacity = "1"
+            if(!novaSenhaInput.value.trim() == "") {
+               antigaSenhaError.style.opacity = "1" 
             }
+
+            if(!nomeInput.value.trim() == "" && antigaSenhaInput.value.trim() == "" && novaSenhaInput.value.trim() == "") {
+                formulario.submit()
+            } else if (!antigaSenhaInput.value.trim() == "") {
+                    if (!novaSenhaInput.value.trim() == "") {
+                        resetStyles()
+                        formulario.submit()
+                    }
+                
+            }
+
 
         };
 
