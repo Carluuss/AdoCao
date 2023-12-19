@@ -6,7 +6,6 @@
     --PrimaryColor: #2060c0;
     --SecondaryColor: #67a8fc;
     --TerciariColor: #2595c9;
-    
 }
 
 
@@ -16,35 +15,101 @@
     border: border-box;
     font-family: 'Tilt Neon', sans-serif;
 }
+  
+  .container {
+    padding: 5px;
+    width: 100vw;
+  }
+  
+  .logo img{
+    height: 1.2em;
+  }
+  
+  nav {
+    display: flex;
+    align-items: flex-end;
+  }
+  
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .menu-toggle span {
+    height: 3px;
+    width: 25px;
+    background: #333;
+    margin: 5px 0;
+    display: block;
+  }
+  
+  .menu {
+    list-style: none;
+    display: flex;
+  }
+  
+  .menu li {
+    margin-right: 20px;
+  }
+  
+  .menu a {
+    text-decoration: none;
+    color: rgb(26, 26, 26);
+    font-weight: bold;
+    font-size: 25px;
+    transition: color 0.3s ease;
+  }
+  
+  .menu a:hover {
+    color: var(--SecondaryColor);
+  }
 
-.navbar {
-    background-color: var(--TerciariColor);
+.menu div {
+    display: flex;
 }
+  
+  @media screen and (max-width: 768px) {
+    nav {
+        align-items: center;
+    }
 
-.navbar span {
-    color: var(--PrimaryColor);
-}
+    .menu-toggle {
+        margin-left: 20em;
+    }
 
-.navbar a{
-    color: white;
-    font-size: 1.8em;
-}
+    .menu {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      position: absolute;
+      top: 70px;
+      left: 0;
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      z-index: 99999;
+    }
 
-.navbar a:hover {
-    color: var(--PrimaryColor);
-}
+    .menu.show-menu {
+        display: flex;
+    }
+  
+    .menu li {
+      margin-right: 0;
+      text-align: center;
+      padding: 10px;
+    }
+  
+    .menu-toggle {
+      display: flex;
+    }
+  }
+
+
 
 .logo{
     font-size: 50px;
     font-weight: normal;
-}
-
-.dropdown a {
-    color: white !important;
-}
-
-.dropdown-menu a{
-    color: black !important;
 }
 
 .formButton {
@@ -69,12 +134,12 @@ header nav a {
     transition: .5s;
 }
 
-header nav a:hover {
+.painel nav a:hover {
     text-decoration: underline;
     color: var(--SecondaryColor);
 }
 
-header > div {
+.painel > div {
     background-image: url(Img/headerbackground.webp);
     background-repeat: no-repeat;
     background-size: cover;
@@ -88,12 +153,12 @@ header > div {
     box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 
-header > div > h2 {
+.painel > div > h2 {
     font-size: 5vw;
     
 }
 
-header > div > a {
+.painel > div > a {
     cursor: pointer;
     font-size: 1.8em;
     border-bottom: 1px solid white;
@@ -103,14 +168,14 @@ header > div > a {
     z-index: 999;
 }
 
-header > div > a:hover {
+.painel > div > a:hover {
     color: var(--PrimaryColor);
     border-bottom: 1px solid var(--PrimaryColor);
 }
 
-header > div > img {
+.painel > div > img {
     position: absolute;
-    top: 252px;
+    top: 245px;
 }
 
 body{
@@ -230,28 +295,31 @@ main{
 }
 
 
-.aboutUs{
-    margin-top: 3vh;
-    padding: 2em 5em;
-}
-
-.aboutUs h1 {
-    font-weight: bold;
-    border-bottom: 2px solid var(--PrimaryColor);
-    color: white;
-}
-
-.aboutUs p span {
-    color: var(--PrimaryColor);
-    font-size: 30px;
-}
-
-.aboutUs p{
-    font-size: 25px;
-    margin: 0;
-}
-
 footer {
     background-color: #212529;
     color: white;
 }
+
+#aboutUs > div > img {
+    height: 8em;
+}
+
+#aboutUs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3em 15em;
+}
+
+#aboutUs > div {
+    display: flex;
+    flex-direction: column;
+}
+
+#aboutUs > div > a {
+    color: white;
+}
+#aboutUs > div > a:hover {
+    color: var(--SecondaryColor);
+}
+

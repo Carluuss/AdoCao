@@ -46,37 +46,24 @@ if(isset($_SESSION['updatePassword'])) {
 
 <!--CABEÇALHO-->
 
-  <header>
-    <nav class="navbar navbar-expand-lg">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Ado<span>C</span>ão</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#servicesContent">Serviços</a>
-            </li>
-            <li class="nav-item">
-              <a href="#aboutUs" class="nav-link">
-                Sobre nós
-              </a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Animais
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <li><a class="dropdown-item" href="#AnimalsContent">Cachorros</a></li>
-                <li><a class="dropdown-item" href="#AnimalsContent">Gatos</a></li>
-                <li><a class="dropdown-item" href="#AnimalsContent">Pássaros</a></li>
-              </ul>
-            </li>
-            <?php
+  
+            
+
+<header>
+    <div class="container">
+      <nav>
+        <div class="logo"><img src="Img/logo.png" alt=""></div>
+        <div class="menu-toggle" id="mobile-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul class="menu">
+          <li><a href="#">Serviços</a></li>
+          <li><a href="#">Animais</a></li>
+          <li><a href="#">Sobre Nós</a></li>
+
+          <?php
             echo"
             
             <li class='nav-item dropdown'>
@@ -90,17 +77,19 @@ if(isset($_SESSION['updatePassword'])) {
           </li>
             
             ";
-            ?>
-          </ul>
-        </div>
-      </div>
-    </nav>
+            ?>  
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="painel">
     <div class="titlemenu">
       <h2>Leve o amor para casa</h2>
       <a href="#AnimalsContent">Venha ver nossos bichinhos</a>
       <img src="Img/visao-dos-caes-removebg-preview.png" alt="">
     </div>
-  </header>
+  </div>
 
 <!--MENU DE BOLINHAS DO SITE-->
 
@@ -226,6 +215,8 @@ if(isset($_SESSION['updatePassword'])) {
       </div>
     </div>
   </footer>
+
+  <script src="./HomePage.js"></script>
 </body>
 
 </html>
