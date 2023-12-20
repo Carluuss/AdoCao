@@ -35,7 +35,7 @@ session_start();
         <div class="formContent">
             <form action="../PHP/login.php" method="POST" id="formLogin">
                 <div>
-                    <h1>ADO<span>C</span>ÃO</h1>
+                    <img src="../../Img/slogan.png" alt="">
                 </div>
                 <div>
                     <div>
@@ -63,7 +63,7 @@ session_start();
             </form>
             <hr>
             <a href="../FormRegisterPage/FormPage.html">Não tem uma conta? Crie uma!<img class="icon" src="../formImg/icon-pata.png"></a>
-                <a href="../../index.php"><img class="icon" src="../formImg/seta2-icon.png"><p>Voltar para a página</p><img class="icon" src="../formImg/icon-pata.png"></a>
+                <a href="../../index.html"><img class="icon" src="../formImg/seta2-icon.png"><p>Voltar para a página</p><img class="icon" src="../formImg/icon-pata.png"></a>
         </div>
     </div>
     <script>

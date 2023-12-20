@@ -35,7 +35,7 @@ if (isset($_SESSION['updatePassword'])) {
             <form action="../PHP/editarDados.php" method="POST" id="formLogin">
                 <input type="hidden" name="idCliente" <?php echo"value='$linha[id_cliente]'"?>>
                 <div>
-                    <h1>ADO<span>C</span>ÃO</h1>
+                    <img src="../../Img/slogan.png" alt="">
                 </div>
                 <div>
                     <div>
